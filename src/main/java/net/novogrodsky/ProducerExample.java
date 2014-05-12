@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
 
+import net.novogrodsky.Constants;
+
 import kafka.javaapi.producer.Producer;
 import kafka.producer.DefaultPartitioner;
 import kafka.producer.KeyedMessage;

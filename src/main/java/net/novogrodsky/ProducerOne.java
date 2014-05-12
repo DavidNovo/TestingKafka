@@ -22,12 +22,12 @@ public class ProducerOne {
         */
         Properties props = new Properties();
         // this is where I find the brokers, to find the leaders
-        props.put("metadata.broker.list", "broker1:9092,broker2:9092 ");
+        props.put("metadata.broker.list", "broker1:9092,broker2:9092");
         // then what serializer to use to send message to queue
         props.put("serializer.class", "kafka.serializer.StringEncoder");
         // now, which class determines where a message goes?
         // to which partion in the topic?
-        props.put("partitioner.class", "net.novogrodsky.SimplePartitioner");
+        props.put("partitioner.class", "example.producer.SimplePartitioner");
         // do we producer to require acknowledgement tha message was received?
         // in this case, yes.
         props.put("request.required.acks", "1");
